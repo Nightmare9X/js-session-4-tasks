@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user info analyze</title>
+</head>
+<body>
+    <script>
+        let fullName = prompt("Enter your full name:");
+let email = prompt("Enter your email address:");
+
+let trimmedName = fullName.trim();
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let emailResult = emailPattern.test(email) ? "Valid Email" : "Invalid Email";
+let nameLength = trimmedName.length;
+let reversedName = trimmedName.split("").reverse().join("");
+let nameParts = trimmedName.split(/\s+/);
+let firstWord = nameParts.length > 1 ? nameParts[0] : trimmedName;
+let lastThree = trimmedName.slice(-3);
+
+alert(emailResult);
+alert("Trimmed Name Length: " + nameLength);
+alert("Reversed Name: " + reversedName);
+alert("First Word: " + firstWord);
+alert("Last 3 Characters: " + lastThree);
+    </script>
+</body>
+</html>

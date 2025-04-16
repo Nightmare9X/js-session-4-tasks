@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nummbers & arrays playground</title>
+</head>
+<body>
+    <script>
+        let grades = [70.5, 88.9, 92.3, 60.7, 79.1];
+alert("Original Grades: " + grades);
+
+grades = grades.map(g => Math.round(g));
+alert("Rounded Grades: " + grades);
+
+grades.unshift(55);
+grades.push(99);
+alert("After unshift and push: " + grades);
+
+grades.shift();
+grades.pop();
+alert("After shift and pop: " + grades);
+
+let index = grades.indexOf(89);
+alert("Index of 89: " + (index !== -1 ? index : "Not found"));
+
+let highest = Math.max(...grades);
+let lowest = Math.min(...grades);
+alert("Highest Grade: " + highest);
+alert("Lowest Grade: " + lowest);
+
+let sum = grades.reduce((a, b) => a + b, 0);
+let average = sum / grades.length;
+alert("Average: " + average.toFixed(1));
+    </script>
+    
+</body>
+</html>
